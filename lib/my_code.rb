@@ -1,4 +1,4 @@
-def map(array)
+def map(array, block)
   map(array) { |element| element * element }
 end
 
