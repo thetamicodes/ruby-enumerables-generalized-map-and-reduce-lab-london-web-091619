@@ -1,7 +1,12 @@
-def map(array, block)
-  map(array) { |element| element * element }
+def map(array, &block)
+ array.map(&block)
 end
 
-def generalized_reduce(source_array, starting value = 10)
-  source_array.reduce(starting value) { |sum, element| sum + element }
+def reduce(source_array, starting_point = nil, &block)
+ if starting_point.nil? 
+   source_array.reduce(&block) 
+  else 
+    source_array.reduce(starting_point, &block)
+ end
 end
+
