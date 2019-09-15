@@ -1,5 +1,5 @@
-def map(array, block)
-  array.map(block) { |element| element * element }
+def map(arr, &block)
+ arr.map(&block)
 end
 
 def generalized_reduce(source_array, starting_value = 10, block)
